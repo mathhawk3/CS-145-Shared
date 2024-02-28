@@ -1,9 +1,9 @@
 import java.awt.*;
 import java.util.Random;
-public class MondrianArt{
+public class MondrianArt2{
     private static final int INITIAL_WIDTH = 700;
     private static final int INITIAL_HEIGHT = 700;
-    private static final int MIN_SPLIT_SIZE = 100;
+    private static final int MIN_SPLIT_SIZE = 20;
 
     private static Random random = new Random();
 
@@ -71,17 +71,18 @@ public class MondrianArt{
         else {
             if(random.nextBoolean()) {
                 int colorSelector = random.nextInt(3);
-                switch(colorSelector) {
-                    case 0:
-                        g.setColor(Color.BLUE);
-                        break;
-                    case 1:
-                        g.setColor(Color.YELLOW);
-                        break;
-                    case 2:
-                        g.setColor(Color.RED);
-                        break;
-                }
+                // switch(colorSelector) {
+                //     case 0:
+                //         g.setColor(Color.BLUE);
+                //         break;
+                //     case 1:
+                //         g.setColor(Color.YELLOW);
+                //         break;
+                //     case 2:
+                //         g.setColor(Color.RED);
+                //         break;
+                // }
+                g.setColor(new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256)));
                 g.fillRect(x, y, width, height);
             }
             g.setColor(Color.BLACK);
